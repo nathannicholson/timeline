@@ -9,9 +9,6 @@ import lxml
 import requests
 import csv
 
-with open('1995 - Wikipedia.html',encoding = 'utf8') as page:
-    soup = BeautifulSoup(   page,'lxml')
-
 def grab_year_pages(years):
     for year in years:
         page = requests.get('https://wikipedia.org/wiki/'+year)
